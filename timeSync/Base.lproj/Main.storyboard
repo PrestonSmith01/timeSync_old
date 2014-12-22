@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="timeSync" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2D-b7-vH7">
+                                <rect key="frame" x="16" y="28" width="89" height="30"/>
+                                <state key="normal" title="Create Event">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createEventButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wir-d0-MM5"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kfF-kn-lmt">
+                                <rect key="frame" x="16" y="299" width="568" height="2"/>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-JY-rQV">
+                                <rect key="frame" x="505" y="28" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="wAY-ZW-Gtt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xLY-fM-59s">
+                                <rect key="frame" x="16" y="56" width="116" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="yig-Q3-JXf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kfF-kn-lmt" firstAttribute="leading" secondItem="N2D-b7-vH7" secondAttribute="leading" id="Bzs-NS-rOK"/>
+                            <constraint firstItem="dAa-JY-rQV" firstAttribute="bottom" secondItem="N2D-b7-vH7" secondAttribute="bottom" id="EhH-7j-OhJ"/>
+                            <constraint firstItem="xLY-fM-59s" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="KKm-GP-3Dy"/>
+                            <constraint firstItem="dAa-JY-rQV" firstAttribute="trailing" secondItem="kfF-kn-lmt" secondAttribute="trailing" id="NZy-tY-XgW"/>
+                            <constraint firstItem="N2D-b7-vH7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="ZEN-4F-xjl"/>
+                            <constraint firstItem="N2D-b7-vH7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cmG-A6-Xiq"/>
+                            <constraint firstItem="xLY-fM-59s" firstAttribute="leading" secondItem="N2D-b7-vH7" secondAttribute="leading" id="lL8-Wb-FoG"/>
+                            <constraint firstItem="kfF-kn-lmt" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="llk-wD-9zB"/>
+                            <constraint firstItem="kfF-kn-lmt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qk0-W8-DMQ"/>
+                            <constraint firstItem="dAa-JY-rQV" firstAttribute="top" secondItem="N2D-b7-vH7" secondAttribute="top" id="uBq-GR-NGh"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
+                    <connections>
+                        <outlet property="tt_CreateEvent" destination="N2D-b7-vH7" id="l1i-C4-vVP"/>
+                        <outlet property="tt_countDown" destination="dAa-JY-rQV" id="GYm-ax-Arw"/>
+                        <outlet property="tt_eventCreateField" destination="xLY-fM-59s" id="G4e-ba-TpK"/>
+                        <outlet property="tt_timeLine" destination="kfF-kn-lmt" id="tvw-Bh-LuK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="314"/>
+        </scene>
+    </scenes>
+</document>
